@@ -1,0 +1,108 @@
+//colors
+$primary-color: #66d6da;
+$secondary-color: #7b4b95;
+$third-color: #fff;
+
+// Media Queries and grid settings
+$screen-extra-small:              	480px!default;
+$screen-small:                    	620px!default;
+$screen-medium:                   	768px!default;
+$screen-large:                    	1024px!default;
+$screen-extra-large:              	1280px!default;
+
+/*------------------------------------*\
+   PADDING
+\*------------------------------------*/
+$padding-breakpoints : ('top', 'bottom', 'left', 'right');
+
+$padding-size: (
+  "without" : "0px",
+  "small" : "10px",
+  "medium" : "20px",
+  "large" : "40px",
+);
+
+@each $name, $value in $padding-size{
+    .padding--#{$name} {
+      padding: $value;
+    };
+};
+
+@each $name in $padding-breakpoints {
+  @each $size, $value in $padding-size {
+      .padding--#{$name}-#{$size}{
+        padding-#{$name}: $value;
+      }
+    };
+};
+
+/*------------------------------------*\
+   MARGIN
+\*------------------------------------*/
+
+$margin-breakpoints : ('top', 'bottom', 'left', 'right');
+
+$margin-size : (
+  "without" : "0px",
+  "small" : "10px",
+  "medium" : "20px",
+  "large" : "40px",
+);
+
+@each $name, $value in $margin-size {
+  .margin--#{$name} {
+    margin: $value;
+  };
+};
+
+@each $name in $margin-breakpoints {
+  @each $size, $value in $margin-size {
+    .margin--#{$name}-#{$size}{
+      margin-#{$name}: $value;
+
+    }
+  };
+};
+
+/*------------------------------------*\
+   BORDER
+\*------------------------------------*/
+
+$border-breakpoints : ('top', 'bottom', 'left', 'right');
+
+$border-size : (
+  "without" : "0px",
+  "small" : "3px",
+  "medium" : "4px",
+  "large" : "5px",
+);
+
+/**
+ * If you don't want to use border-style set
+ * $border-styling to ‘false’:
+ */
+$border-styling: true;
+
+$border-style : ( 'none', 'hidden', 'dotted', 'dashed', 'solid', 'double', 'groove', 'ridge', 'inset', 'outset');
+
+@each $name, $value in $border-size {
+  @if ($border-styling == true){
+    @each $border-name in $border-style {
+    .border--#{$name}-#{$border-name}{
+      border: $value $border-name $primary-color;
+     }
+    };
+ } @else {
+   .border--#{$name}{
+     border: $value;
+    }
+   }
+};
+
+@each $name in $border-breakpoints {
+ @each $size, $value in $border-size {
+   .border--#{$name}-#{$size} {
+     border-#{$name}: $value;
+   }
+ };
+};
