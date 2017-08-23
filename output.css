@@ -1,68 +1,5 @@
 @charset "UTF-8";
 /*------------------------------------*\
-   PADDING
-\*------------------------------------*/
-.padding--without {
-  padding: "0px"; }
-
-.padding--small {
-  padding: "10px"; }
-
-.padding--medium {
-  padding: "20px"; }
-
-.padding--large {
-  padding: "40px"; }
-
-.padding--top-without {
-  padding-top: "0px"; }
-
-.padding--top-small {
-  padding-top: "10px"; }
-
-.padding--top-medium {
-  padding-top: "20px"; }
-
-.padding--top-large {
-  padding-top: "40px"; }
-
-.padding--bottom-without {
-  padding-bottom: "0px"; }
-
-.padding--bottom-small {
-  padding-bottom: "10px"; }
-
-.padding--bottom-medium {
-  padding-bottom: "20px"; }
-
-.padding--bottom-large {
-  padding-bottom: "40px"; }
-
-.padding--left-without {
-  padding-left: "0px"; }
-
-.padding--left-small {
-  padding-left: "10px"; }
-
-.padding--left-medium {
-  padding-left: "20px"; }
-
-.padding--left-large {
-  padding-left: "40px"; }
-
-.padding--right-without {
-  padding-right: "0px"; }
-
-.padding--right-small {
-  padding-right: "10px"; }
-
-.padding--right-medium {
-  padding-right: "20px"; }
-
-.padding--right-large {
-  padding-right: "40px"; }
-
-/*------------------------------------*\
    MARGIN
 \*------------------------------------*/
 .margin--without {
@@ -128,69 +65,221 @@
 /*------------------------------------*\
    BORDER
 \*------------------------------------*/
-/**
- * If you don't want to use border-style set
- * $border-styling to ‘false’:
- */
-.border--without {
-  border-radius: "0px"; }
-
-.border--small {
-  border-radius: "3px"; }
-
-.border--medium {
-  border-radius: "4px"; }
-
-.border--large {
-  border-radius: "5px"; }
-
 .border--top-without {
-  border-top-radius: "0px"; }
+  border-top: 0px; }
 
 .border--top-small {
-  border-top-radius: "3px"; }
+  border-top: 3px; }
 
 .border--top-medium {
-  border-top-radius: "4px"; }
+  border-top: 4px; }
 
 .border--top-large {
-  border-top-radius: "5px"; }
+  border-top: 5px; }
 
 .border--bottom-without {
-  border-bottom-radius: "0px"; }
+  border-bottom: 0px; }
 
 .border--bottom-small {
-  border-bottom-radius: "3px"; }
+  border-bottom: 3px; }
 
 .border--bottom-medium {
-  border-bottom-radius: "4px"; }
+  border-bottom: 4px; }
 
 .border--bottom-large {
-  border-bottom-radius: "5px"; }
+  border-bottom: 5px; }
 
 .border--left-without {
-  border-left-radius: "0px"; }
+  border-left: 0px; }
 
 .border--left-small {
-  border-left-radius: "3px"; }
+  border-left: 3px; }
 
 .border--left-medium {
-  border-left-radius: "4px"; }
+  border-left: 4px; }
 
 .border--left-large {
-  border-left-radius: "5px"; }
+  border-left: 5px; }
 
 .border--right-without {
-  border-right-radius: "0px"; }
+  border-right: 0px; }
 
 .border--right-small {
-  border-right-radius: "3px"; }
+  border-right: 3px; }
 
 .border--right-medium {
-  border-right-radius: "4px"; }
+  border-right: 4px; }
 
 .border--right-large {
-  border-right-radius: "5px"; }
+  border-right: 5px; }
+
+/*------------------------------------*\
+   BORDER RADIUS
+\*------------------------------------*/
+.border--top-left-without {
+  border-top-left-radius: "0px"; }
+
+.border--top-left-small {
+  border-top-left-radius: "3px"; }
+
+.border--top-left-medium {
+  border-top-left-radius: "4px"; }
+
+.border--top-left-large {
+  border-top-left-radius: "5px"; }
+
+.border--top-right-without {
+  border-top-right-radius: "0px"; }
+
+.border--top-right-small {
+  border-top-right-radius: "3px"; }
+
+.border--top-right-medium {
+  border-top-right-radius: "4px"; }
+
+.border--top-right-large {
+  border-top-right-radius: "5px"; }
+
+.border--bottom-left-without {
+  border-bottom-left-radius: "0px"; }
+
+.border--bottom-left-small {
+  border-bottom-left-radius: "3px"; }
+
+.border--bottom-left-medium {
+  border-bottom-left-radius: "4px"; }
+
+.border--bottom-left-large {
+  border-bottom-left-radius: "5px"; }
+
+.border--bottom-right-without {
+  border-bottom-right-radius: "0px"; }
+
+.border--bottom-right-small {
+  border-bottom-right-radius: "3px"; }
+
+.border--bottom-right-medium {
+  border-bottom-right-radius: "4px"; }
+
+.border--bottom-right-large {
+  border-bottom-right-radius: "5px"; }
+
+/*------------------------------------*\
+   PADDING
+\*------------------------------------*/
+.padding--without {
+  padding: 0px; }
+
+.padding--small {
+  padding: 10px; }
+
+.padding--medium {
+  padding: 20px; }
+
+.padding--large {
+  padding: 40px; }
+
+.padding--top-without {
+  padding-top: 0px; }
+
+.padding--top-small {
+  padding-top: 10px; }
+
+.padding--top-medium {
+  padding-top: 20px; }
+
+.padding--top-large {
+  padding-top: 40px; }
+
+.padding--bottom-without {
+  padding-bottom: 0px; }
+
+.padding--bottom-small {
+  padding-bottom: 10px; }
+
+.padding--bottom-medium {
+  padding-bottom: 20px; }
+
+.padding--bottom-large {
+  padding-bottom: 40px; }
+
+.padding--left-without {
+  padding-left: 0px; }
+
+.padding--left-small {
+  padding-left: 10px; }
+
+.padding--left-medium {
+  padding-left: 20px; }
+
+.padding--left-large {
+  padding-left: 40px; }
+
+.padding--right-without {
+  padding-right: 0px; }
+
+.padding--right-small {
+  padding-right: 10px; }
+
+.padding--right-medium {
+  padding-right: 20px; }
+
+.padding--right-large {
+  padding-right: 40px; }
+
+/*------------------------------------*\
+   TYPOGRAPHY
+\*------------------------------------*/
+.text--atomic {
+  font-size: 10px; }
+
+.text--micro {
+  font-size: 20px; }
+
+.text--tiny {
+  font-size: 30px; }
+
+.text--small {
+  font-size: 40px; }
+
+.text--reduced {
+  font-size: 50px; }
+
+.text--regular {
+  font-size: 60px; }
+
+.text--increased {
+  font-size: 70px; }
+
+.text--large {
+  font-size: 80px; }
+
+.text--huge {
+  font-size: 90px; }
+
+.text--giant {
+  font-size: 100px; }
+
+/*------------------------------------*\
+   HEADING CLASSES
+\*------------------------------------*/
+.h1 {
+  font-size: 36px; }
+
+.h2 {
+  font-size: 30px; }
+
+.h3 {
+  font-size: 28px; }
+
+.h4 {
+  font-size: 18px; }
+
+.h5 {
+  font-size: 14px; }
+
+.h6 {
+  font-size: 12px; }
 
 /*------------------------------------*\
     $CSSWIZARDRY-GRIDS

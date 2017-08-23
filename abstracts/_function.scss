@@ -1,0 +1,31 @@
+
+/*------------------------------------*\
+   PADDING
+\*------------------------------------*/
+$padding-breakpoints : ('top', 'bottom', 'left', 'right');
+
+$padding-size: (
+  "without" :  0px,
+  "small" :    10px,
+  "medium" :   20px,
+  "large" :    40px,
+);
+
+@each $name, $value in $padding-size{
+  //Css class
+    #{$css-class}padding--#{$name} {
+      padding: $value;
+    };
+  //silent class
+    #{$silent-classes}padding--#{$name} {
+      padding: $value;
+    };
+};
+
+@each $name in $padding-breakpoints {
+  @each $size, $value in $padding-size {
+      .padding--#{$name}-#{$size}{
+        padding-#{$name}: $value;
+      }
+    };
+};

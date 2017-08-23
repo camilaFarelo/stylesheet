@@ -1,7 +1,16 @@
+//Type class
+$silent-classes:                   "%";
+$css-class:                        ".";
+
 //colors
 $primary-color: #66d6da;
 $secondary-color: #7b4b95;
 $third-color: #fff;
+$success-color: #28a745;
+$danger-color: #dc3545;
+$warning-color: #ffc107;
+$info-color: #17a2b8;
+$disable-color: #868e96;
 
 // Media Queries and grid settings
 $screen-extra-small:              	480px!default;
@@ -10,31 +19,15 @@ $screen-medium:                   	768px!default;
 $screen-large:                    	1024px!default;
 $screen-extra-large:              	1280px!default;
 
-/*------------------------------------*\
-   PADDING
-\*------------------------------------*/
-$padding-breakpoints : ('top', 'bottom', 'left', 'right');
+// Typography
+$font-size-h1:                      36px;
+$font-size-h2:                      30px;
+$font-size-h3:                      28px;
+$font-size-h4:                      18px;
+$font-size-h5:                      14px;
+$font-size-h6:                      12px;
 
-$padding-size: (
-  "without" : "0px",
-  "small" : "10px",
-  "medium" : "20px",
-  "large" : "40px",
-);
 
-@each $name, $value in $padding-size{
-    .padding--#{$name} {
-      padding: $value;
-    };
-};
-
-@each $name in $padding-breakpoints {
-  @each $size, $value in $padding-size {
-      .padding--#{$name}-#{$size}{
-        padding-#{$name}: $value;
-      }
-    };
-};
 
 /*------------------------------------*\
    MARGIN
@@ -74,38 +67,41 @@ $border-base-radius: 4px;
 $border-breakpoints : ('top', 'bottom', 'left', 'right');
 
 $border-size : (
-  "without" : "0px",
-  "small" : "3px",
-  "medium" : "4px",
-  "large" : "5px",
+  "without" : 0px,
+  "small" : 3px,
+  "medium" : 4px,
+  "large" : 5px,
 );
 
-/**
- * If you don't want to use border-style set
- * $border-styling to ‘false’:
- */
-$border-styling: false;
-
-$border-style : ( 'none', 'hidden', 'dotted', 'dashed', 'solid', 'double', 'groove', 'ridge', 'inset', 'outset');
-
-@each $name, $value in $border-size {
-  @if ($border-styling == true){
-    @each $border-name in $border-style {
-    .border--#{$name}-#{$border-name}{
-      border: $value $border-name $primary-color;
-     }
-    };
- } @else {
-   .border--#{$name}{
-     border-radius: $value;
+@each $name in $border-breakpoints {
+  @each $border, $value in $border-size {
+    .border--#{$name}-#{$border} {
+      border-#{$name}: $value
     }
-   }
+  };
 };
 
-@each $name in $border-breakpoints {
- @each $size, $value in $border-size {
-   .border--#{$name}-#{$size} {
-     border-#{$name}-radius: $value;
-   }
- };
+/*------------------------------------*\
+   BORDER RADIUS
+\*------------------------------------*/
+
+$border-radius-y-breakpoints : ('top', 'bottom');
+
+$border-radius-x-breakpoint : ('left', 'right');
+
+  $border-radius-size : (
+    "without" : "0px",
+    "small" : "3px",
+    "medium" : "4px",
+    "large" : "5px",
+  );
+
+@each $name in $border-radius-y-breakpoints {
+  @each $x in $border-radius-x-breakpoint {
+    @each $radius, $value in $border-radius-size {
+      .border--#{$name}-#{$x}-#{$radius} {
+        border-#{$name}-#{$x}-radius: $value
+      }
+    }
+  }
 };

@@ -1,7 +1,10 @@
-//layout files
 
 //abstracts
 @import "abstracts/variables";
+@import "abstracts/function";
+
+//base
+@import "base/typography";
 
 //layout
 @import "layout/grid";
@@ -10,4 +13,4 @@
 @import "components/panel";
 
 //vendors
-@import "vendors/normalize"
+@import "vendors/normalize";
