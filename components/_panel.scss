@@ -1,1 +1,14 @@
 
+.panel{
+  background-color: $third-color;
+  color: $primary-color;
+  border-radius: $border-base-radius;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 2px rgba(#000, 0.30);
+  margin-bottom: $margin-base;
+  position: relative;
+  & > .table,
+  & > .table-responsive{
+    margin-bottom: 0;
+  }
+}

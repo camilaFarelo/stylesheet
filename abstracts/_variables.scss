@@ -39,6 +39,7 @@ $padding-size: (
 /*------------------------------------*\
    MARGIN
 \*------------------------------------*/
+$margin-base: 5px;
 
 $margin-breakpoints : ('top', 'bottom', 'left', 'right');
 
@@ -68,6 +69,8 @@ $margin-size : (
    BORDER
 \*------------------------------------*/
 
+$border-base-radius: 4px;
+
 $border-breakpoints : ('top', 'bottom', 'left', 'right');
 
 $border-size : (
@@ -81,7 +84,7 @@ $border-size : (
  * If you don't want to use border-style set
  * $border-styling to ‘false’:
  */
-$border-styling: true;
+$border-styling: false;
 
 $border-style : ( 'none', 'hidden', 'dotted', 'dashed', 'solid', 'double', 'groove', 'ridge', 'inset', 'outset');
 
@@ -94,7 +97,7 @@ $border-style : ( 'none', 'hidden', 'dotted', 'dashed', 'solid', 'double', 'groo
     };
  } @else {
    .border--#{$name}{
-     border: $value;
+     border-radius: $value;
     }
    }
 };
@@ -102,7 +105,7 @@ $border-style : ( 'none', 'hidden', 'dotted', 'dashed', 'solid', 'double', 'groo
 @each $name in $border-breakpoints {
  @each $size, $value in $border-size {
    .border--#{$name}-#{$size} {
-     border-#{$name}: $value;
+     border-#{$name}-radius: $value;
    }
  };
 };
