@@ -210,10 +210,11 @@ $use-markup-fix:        true!default;
      * 5. Required to combine fluid widths and fixed gutters.
      */
     #{$css-class}grid__item{
-        display:inline-block;           /* [1] */
-        float:left;                     /* [2] */
-        padding-left:$gutter;           /* [3] */
+        display:inline-block;           /* [2] */
         vertical-align:top;             /* [4] */
+				display: flex;
+				flex-wrap: wrap;
+
         @if $mobile-first == true{
             width:100%;                 /* [5] */
         }
@@ -338,70 +339,48 @@ $use-markup-fix:        true!default;
     /**
      * Whole
      */
-    #{$css-class}#{$namespace}one-whole         { width:100%; }
-
+    #{$css-class}#{$namespace}one-whole         { flex: 0 0 100%; }
 
     /**
      * Halves
      */
-    #{$css-class}#{$namespace}one-half          { width:50%; }
-
+    #{$css-class}#{$namespace}one-half          { flex: 0 0 50%; }
 
     /**
      * Thirds
      */
-    #{$css-class}#{$namespace}one-third         { width:33.333%; }
-    #{$css-class}#{$namespace}two-thirds        { width:66.666%; }
+    #{$css-class}#{$namespace}one-third         { flex: 0 0 33.333%; }
 
 
     /**
      * Quarters
      */
-    #{$css-class}#{$namespace}one-quarter       { width:25%; }
-    #{$css-class}#{$namespace}three-quarters    { width:75%; }
-
+    #{$css-class}#{$namespace}one-quarter       { flex: 0 0 25%; }
 
     /**
      * Fifths
      */
-    #{$css-class}#{$namespace}one-fifth         { width:20%; }
-    #{$css-class}#{$namespace}two-fifths        { width:40%; }
-    #{$css-class}#{$namespace}three-fifths      { width:60%; }
-    #{$css-class}#{$namespace}four-fifths       { width:80%; }
-
+    #{$css-class}#{$namespace}one-fifth         { flex: 0 0 20%; }
 
     /**
      * Sixths
      */
-    #{$css-class}#{$namespace}one-sixth         { width:16.666%; }
-    #{$css-class}#{$namespace}five-sixths       { width:83.333%; }
-
+    #{$css-class}#{$namespace}one-sixth         { flex: 0 0 16.666%; }
 
     /**
      * Eighths
      */
-    #{$css-class}#{$namespace}one-eighth        { width:12.5%; }
-    #{$css-class}#{$namespace}three-eighths     { width:37.5%; }
-    #{$css-class}#{$namespace}five-eighths      { width:62.5%; }
-    #{$css-class}#{$namespace}seven-eighths     { width:87.5%; }
-
+    #{$css-class}#{$namespace}one-eighth        { flex: 0 0 12.5%; }
 
     /**
      * Tenths
      */
-    #{$css-class}#{$namespace}one-tenth         { width:10%; }
-    #{$css-class}#{$namespace}three-tenths      { width:30%; }
-    #{$css-class}#{$namespace}seven-tenths      { width:70%; }
-    #{$css-class}#{$namespace}nine-tenths       { width:90%; }
-
+    #{$css-class}#{$namespace}one-tenth         { flex: 0 0 10%; }
 
     /**
      * Twelfths
      */
-    #{$css-class}#{$namespace}one-twelfth       { width:8.333%; }
-    #{$css-class}#{$namespace}five-twelfths     { width:41.666% }
-    #{$css-class}#{$namespace}seven-twelfths    { width:58.333%; }
-    #{$css-class}#{$namespace}eleven-twelfths   { width:91.666%; }
+    #{$css-class}#{$namespace}one-twelfth       { flex: 0 0 8.333%; }
 
 			//silent-class
 		 @if $use-silent-classes == true {
@@ -409,70 +388,47 @@ $use-markup-fix:        true!default;
 			 /**
 	      * Whole
 	      */
-	     #{$silent-class}#{$namespace}one-whole         { width:100%; }
-
+	     #{$silent-class}#{$namespace}one-whole         { flex: 0 0 100%; }
 
 	     /**
 	      * Halves
 	      */
-	     #{$silent-class}#{$namespace}one-half          { width:50%; }
-
+	     #{$silent-class}#{$namespace}one-half          { flex: 0 0 50%; }
 
 	     /**
 	      * Thirds
 	      */
-	     #{$silent-class}#{$namespace}one-third         { width:33.333%; }
-	     #{$silent-class}#{$namespace}two-thirds        { width:66.666%; }
-
+	     #{$silent-class}#{$namespace}one-third         { flex: 0 0 33.333%; }
 
 	     /**
 	      * Quarters
 	      */
-	     #{$silent-class}#{$namespace}one-quarter       { width:25%; }
-	     #{$silent-class}#{$namespace}three-quarters    { width:75%; }
-
+	     #{$silent-class}#{$namespace}one-quarter       { flex: 0 0 25%; }
 
 	     /**
 	      * Fifths
 	      */
-	     #{$silent-class}#{$namespace}one-fifth         { width:20%; }
-	     #{$silent-class}#{$namespace}two-fifths        { width:40%; }
-	     #{$silent-class}#{$namespace}three-fifths      { width:60%; }
-	     #{$silent-class}#{$namespace}four-fifths       { width:80%; }
-
+	     #{$silent-class}#{$namespace}one-fifth         { flex: 0 0 20%; }
 
 	     /**
 	      * Sixths
 	      */
-	     #{$silent-class}#{$namespace}one-sixth         { width:16.666%; }
-	     #{$silent-class}#{$namespace}five-sixths       { width:83.333%; }
-
+	     #{$silent-class}#{$namespace}one-sixth         { flex: 0 0 16.666%; }
 
 	     /**
 	      * Eighths
 	      */
-	     #{$silent-class}#{$namespace}one-eighth        { width:12.5%; }
-	     #{$silent-class}#{$namespace}three-eighths     { width:37.5%; }
-	     #{$silent-class}#{$namespace}five-eighths      { width:62.5%; }
-	     #{$silent-class}#{$namespace}seven-eighths     { width:87.5%; }
-
+	     #{$silent-class}#{$namespace}one-eighth        { flex: 0 0 12.5%; }
 
 	     /**
 	      * Tenths
 	      */
-	     #{$silent-class}#{$namespace}one-tenth         { width:10%; }
-	     #{$silent-class}#{$namespace}three-tenths      { width:30%; }
-	     #{$silent-class}#{$namespace}seven-tenths      { width:70%; }
-	     #{$silent-class}#{$namespace}nine-tenths       { width:90%; }
-
+	     #{$silent-class}#{$namespace}one-tenth         { flex: 0 0 10%; }
 
 	     /**
 	      * Twelfths
 	      */
-	     #{$silent-class}#{$namespace}one-twelfth       { width:8.333%; }
-	     #{$silent-class}#{$namespace}five-twelfths     { width:41.666% }
-	     #{$silent-class}#{$namespace}seven-twelfths    { width:58.333%; }
-	     #{$silent-class}#{$namespace}eleven-twelfths   { width:91.666%; }
+	     #{$silent-class}#{$namespace}one-twelfth       { flex: 0 0 8.333%; }
 
 		 }
 
