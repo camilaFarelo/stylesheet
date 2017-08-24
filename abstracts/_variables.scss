@@ -9,16 +9,20 @@ $silent-class:                     "%";
 $css-class:                        ".";
 
 //colors
-$primary-color: #66d6da;
-$secondary-color: #7b4b95;
-$third-color: #fff;
-$success-color: #28a745;
-$danger-color: #dc3545;
-$warning-color: #ffc107;
-$info-color: #17a2b8;
-$disable-color: #868e96;
+$primary-color:                     #02a9f4;
+$secondary-color:                   #42bff7;
+$third-color:                       #71a9da;
+$fourth-color:                      #5785ad;
+$black-color:                       #000;
+$white-color:                       #fff;
+$success-color:                     #28a745;
+$danger-color:                      #dc3545;
+$warning-color:                     #ffc107;
+$info-color:                        #17a2b8;
+$disable-color:                     #868e96;
 
 // Media Queries and grid settings
+
 $screen-extra-small:              	480px!default;
 $screen-small:                    	620px!default;
 $screen-medium:                   	768px!default;
@@ -26,6 +30,8 @@ $screen-large:                    	1024px!default;
 $screen-extra-large:              	1280px!default;
 
 // Typography
+$font-family-sans-serif:            "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
 $font-size-h1:                      36px;
 $font-size-h2:                      30px;
 $font-size-h3:                      28px;
@@ -38,7 +44,12 @@ $directions-breakpoints :          ('top', 'bottom', 'left', 'right');
 $directions-y-breakpoints :        ('top', 'bottom');
 $directions-x-breakpoints :        ('left', 'right');
 
+//spacing
+$vertical-padding:                 20px;
+$horizontal-padding:               20px;
+
 //Margin
-$margin-base: 5px;
+$margin-base:                      5px;
 //Border
-$border-base-radius: 4px;
+$border-none:                      0px;
+$border-base-radius:               4px;

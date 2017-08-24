@@ -1,3 +1,31 @@
+/*------------------------------------*\
+   TYPOGRAPHY
+\*------------------------------------*/
+$fontSizes: (
+    "atomic":         10px,
+    "micro":          20px,
+    "tiny":           30px,
+    "small":          40px,
+    "reduced":        50px,
+    "regular":        60px,
+    "increased":      70px,
+    "large":          80px,
+    "huge":           90px,
+    "giant":          100px
+);
+
+@each $name, $value in $fontSizes {
+    //Css class
+    #{$css-class}text--#{$name} {
+        font-size:$value;
+    };
+    //Silent class
+    @if $use-silent-classes == true {
+      #{$silent-class}text--#{$name} {
+          font-size:$value;
+      };
+   };
+};
 
 /*------------------------------------*\
    PADDING
@@ -20,7 +48,7 @@ $padding-size: (
       #{$silent-class}padding--#{$name} {
         padding: $value;
       };
-    }
+   };
 };
 
 @each $name in $directions-breakpoints {
@@ -34,7 +62,7 @@ $padding-size: (
         #{$silent-class}padding--#{$name}-#{$size}{
           padding-#{$name}: $value;
         };
-      }
+      };
     };
 };
 
@@ -58,7 +86,7 @@ $margin-size : (
     #{$silent-class}margin--#{$name} {
       margin: $value;
     };
-  }
+  };
 };
 
 @each $name in $directions-breakpoints{
@@ -73,7 +101,7 @@ $margin-size : (
       #{$silent-class}margin--#{$name}-#{$size}{
         margin-#{$name}: $value;
       };
-    }
+    };
   };
 };
 
@@ -99,7 +127,7 @@ $border-size : (
       #{$silent-class}border--#{$name}-#{$border} {
         border-#{$name}: $value
       };
-    }
+    };
   };
 };
 
@@ -125,7 +153,7 @@ $border-size : (
         #{$silent-class}border--#{$name}-#{$x}-#{$radius} {
           border-#{$name}-#{$x}-radius: $value
         };
-      }
+      };
     };
   };
 };
