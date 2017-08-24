@@ -4,23 +4,28 @@
 $font-family-sans-serif:            "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 $fontSizes: (
-    "atomic": 10px,
-    "micro": 20px,
-    "tiny": 30px,
-    "small": 40px,
-    "reduced": 50px,
-    "regular": 60px,
-    "increased": 70px,
-    "large": 80px,
-    "huge": 90px,
-    "giant": 100px
+    "atomic":         10px,
+    "micro":          20px,
+    "tiny":           30px,
+    "small":          40px,
+    "reduced":        50px,
+    "regular":        60px,
+    "increased":      70px,
+    "large":          80px,
+    "huge":           90px,
+    "giant":          100px
 );
 
 @each $name, $value in $fontSizes {
-    .text--#{$name} {
+    //Css class
+    #{$css-class}text--#{$name} {
         font-size:$value;
-    }
-}
+    };
+    //Silent class
+    #{$silent-class}text--#{$name} {
+        font-size:$value;
+    };
+};
    /*------------------------------------*\
       HEADING CLASSES
    \*------------------------------------*/

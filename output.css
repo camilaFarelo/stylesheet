@@ -1,169 +1,8 @@
 @charset "UTF-8";
-/*------------------------------------*\
-   MARGIN
-\*------------------------------------*/
-.margin--without {
-  margin: "0px"; }
-
-.margin--small {
-  margin: "10px"; }
-
-.margin--medium {
-  margin: "20px"; }
-
-.margin--large {
-  margin: "40px"; }
-
-.margin--top-without {
-  margin-top: "0px"; }
-
-.margin--top-small {
-  margin-top: "10px"; }
-
-.margin--top-medium {
-  margin-top: "20px"; }
-
-.margin--top-large {
-  margin-top: "40px"; }
-
-.margin--bottom-without {
-  margin-bottom: "0px"; }
-
-.margin--bottom-small {
-  margin-bottom: "10px"; }
-
-.margin--bottom-medium {
-  margin-bottom: "20px"; }
-
-.margin--bottom-large {
-  margin-bottom: "40px"; }
-
-.margin--left-without {
-  margin-left: "0px"; }
-
-.margin--left-small {
-  margin-left: "10px"; }
-
-.margin--left-medium {
-  margin-left: "20px"; }
-
-.margin--left-large {
-  margin-left: "40px"; }
-
-.margin--right-without {
-  margin-right: "0px"; }
-
-.margin--right-small {
-  margin-right: "10px"; }
-
-.margin--right-medium {
-  margin-right: "20px"; }
-
-.margin--right-large {
-  margin-right: "40px"; }
-
-/*------------------------------------*\
-   BORDER
-\*------------------------------------*/
-.border--top-without {
-  border-top: 0px; }
-
-.border--top-small {
-  border-top: 3px; }
-
-.border--top-medium {
-  border-top: 4px; }
-
-.border--top-large {
-  border-top: 5px; }
-
-.border--bottom-without {
-  border-bottom: 0px; }
-
-.border--bottom-small {
-  border-bottom: 3px; }
-
-.border--bottom-medium {
-  border-bottom: 4px; }
-
-.border--bottom-large {
-  border-bottom: 5px; }
-
-.border--left-without {
-  border-left: 0px; }
-
-.border--left-small {
-  border-left: 3px; }
-
-.border--left-medium {
-  border-left: 4px; }
-
-.border--left-large {
-  border-left: 5px; }
-
-.border--right-without {
-  border-right: 0px; }
-
-.border--right-small {
-  border-right: 3px; }
-
-.border--right-medium {
-  border-right: 4px; }
-
-.border--right-large {
-  border-right: 5px; }
-
-/*------------------------------------*\
-   BORDER RADIUS
-\*------------------------------------*/
-.border--top-left-without {
-  border-top-left-radius: "0px"; }
-
-.border--top-left-small {
-  border-top-left-radius: "3px"; }
-
-.border--top-left-medium {
-  border-top-left-radius: "4px"; }
-
-.border--top-left-large {
-  border-top-left-radius: "5px"; }
-
-.border--top-right-without {
-  border-top-right-radius: "0px"; }
-
-.border--top-right-small {
-  border-top-right-radius: "3px"; }
-
-.border--top-right-medium {
-  border-top-right-radius: "4px"; }
-
-.border--top-right-large {
-  border-top-right-radius: "5px"; }
-
-.border--bottom-left-without {
-  border-bottom-left-radius: "0px"; }
-
-.border--bottom-left-small {
-  border-bottom-left-radius: "3px"; }
-
-.border--bottom-left-medium {
-  border-bottom-left-radius: "4px"; }
-
-.border--bottom-left-large {
-  border-bottom-left-radius: "5px"; }
-
-.border--bottom-right-without {
-  border-bottom-right-radius: "0px"; }
-
-.border--bottom-right-small {
-  border-bottom-right-radius: "3px"; }
-
-.border--bottom-right-medium {
-  border-bottom-right-radius: "4px"; }
-
-.border--bottom-right-large {
-  border-bottom-right-radius: "5px"; }
-
+/*
+*  Set $use-silent-classes true to generate silent classes of the normal css classes
+*  Set $use-silent-classes false if you don't want to generate silent classes of the normal css classes
+*/
 /*------------------------------------*\
    PADDING
 \*------------------------------------*/
@@ -226,6 +65,171 @@
 
 .padding--right-large {
   padding-right: 40px; }
+
+/*------------------------------------*\
+   MARGIN
+\*------------------------------------*/
+.margin--without {
+  margin: 0px; }
+
+.margin--small {
+  margin: 10px; }
+
+.margin--medium {
+  margin: 20px; }
+
+.margin--large {
+  margin: 40px; }
+
+.margin--top-without {
+  margin-top: 0px; }
+
+.margin--top-small {
+  margin-top: 10px; }
+
+.margin--top-medium {
+  margin-top: 20px; }
+
+.margin--top-large {
+  margin-top: 40px; }
+
+.margin--bottom-without {
+  margin-bottom: 0px; }
+
+.margin--bottom-small {
+  margin-bottom: 10px; }
+
+.margin--bottom-medium {
+  margin-bottom: 20px; }
+
+.margin--bottom-large {
+  margin-bottom: 40px; }
+
+.margin--left-without {
+  margin-left: 0px; }
+
+.margin--left-small {
+  margin-left: 10px; }
+
+.margin--left-medium {
+  margin-left: 20px; }
+
+.margin--left-large {
+  margin-left: 40px; }
+
+.margin--right-without {
+  margin-right: 0px; }
+
+.margin--right-small {
+  margin-right: 10px; }
+
+.margin--right-medium {
+  margin-right: 20px; }
+
+.margin--right-large {
+  margin-right: 40px; }
+
+/*------------------------------------*\
+   BORDER
+\*------------------------------------*/
+.border--top-without {
+  border-top: 0px; }
+
+.border--top-small {
+  border-top: 3px; }
+
+.border--top-medium {
+  border-top: 4px; }
+
+.border--top-large {
+  border-top: 5px; }
+
+.border--bottom-without {
+  border-bottom: 0px; }
+
+.border--bottom-small {
+  border-bottom: 3px; }
+
+.border--bottom-medium {
+  border-bottom: 4px; }
+
+.border--bottom-large {
+  border-bottom: 5px; }
+
+.border--left-without {
+  border-left: 0px; }
+
+.border--left-small {
+  border-left: 3px; }
+
+.border--left-medium {
+  border-left: 4px; }
+
+.border--left-large {
+  border-left: 5px; }
+
+.border--right-without {
+  border-right: 0px; }
+
+.border--right-small {
+  border-right: 3px; }
+
+.border--right-medium {
+  border-right: 4px; }
+
+.border--right-large {
+  border-right: 5px; }
+
+/*------------------------------------*\
+   BORDER RADIUS
+\*------------------------------------*/
+.border--top-left-without {
+  border-top-left-radius: 0px; }
+
+.border--top-left-small {
+  border-top-left-radius: 3px; }
+
+.border--top-left-medium {
+  border-top-left-radius: 4px; }
+
+.border--top-left-large {
+  border-top-left-radius: 5px; }
+
+.border--top-right-without {
+  border-top-right-radius: 0px; }
+
+.border--top-right-small {
+  border-top-right-radius: 3px; }
+
+.border--top-right-medium {
+  border-top-right-radius: 4px; }
+
+.border--top-right-large {
+  border-top-right-radius: 5px; }
+
+.border--bottom-left-without {
+  border-bottom-left-radius: 0px; }
+
+.border--bottom-left-small {
+  border-bottom-left-radius: 3px; }
+
+.border--bottom-left-medium {
+  border-bottom-left-radius: 4px; }
+
+.border--bottom-left-large {
+  border-bottom-left-radius: 5px; }
+
+.border--bottom-right-without {
+  border-bottom-right-radius: 0px; }
+
+.border--bottom-right-small {
+  border-bottom-right-radius: 3px; }
+
+.border--bottom-right-medium {
+  border-bottom-right-radius: 4px; }
+
+.border--bottom-right-large {
+  border-bottom-right-radius: 5px; }
 
 /*------------------------------------*\
    TYPOGRAPHY

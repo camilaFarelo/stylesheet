@@ -2,7 +2,6 @@
 /*------------------------------------*\
    PADDING
 \*------------------------------------*/
-$padding-breakpoints : ('top', 'bottom', 'left', 'right');
 
 $padding-size: (
   "without" :  0px,
@@ -12,20 +11,121 @@ $padding-size: (
 );
 
 @each $name, $value in $padding-size{
-  //Css class
+    //Css class
     #{$css-class}padding--#{$name} {
       padding: $value;
     };
   //silent class
-    #{$silent-classes}padding--#{$name} {
-      padding: $value;
+    @if $use-silent-classes == true {
+      #{$silent-class}padding--#{$name} {
+        padding: $value;
+      };
+    }
+};
+
+@each $name in $directions-breakpoints {
+  @each $size, $value in $padding-size {
+      //Css class
+      #{$css-class}padding--#{$name}-#{$size}{
+        padding-#{$name}: $value;
+      };
+      //silent class
+      @if $use-silent-classes == true {
+        #{$silent-class}padding--#{$name}-#{$size}{
+          padding-#{$name}: $value;
+        };
+      }
     };
 };
 
-@each $name in $padding-breakpoints {
-  @each $size, $value in $padding-size {
-      .padding--#{$name}-#{$size}{
-        padding-#{$name}: $value;
+/*------------------------------------*\
+   MARGIN
+\*------------------------------------*/
+$margin-size : (
+  "without" :        0px,
+  "small" :          10px,
+  "medium" :         20px,
+  "large" :          40px,
+);
+
+@each $name, $value in $margin-size {
+  //CSS class
+  #{$css-class}margin--#{$name} {
+    margin: $value;
+  };
+  //silent class
+  @if $use-silent-classes == true {
+    #{$silent-class}margin--#{$name} {
+      margin: $value;
+    };
+  }
+};
+
+@each $name in $directions-breakpoints{
+  @each $size, $value in $margin-size {
+    //CSS class
+    #{$css-class}margin--#{$name}-#{$size}{
+      margin-#{$name}: $value;
+
+    };
+    //Silent Class
+    @if $use-silent-classes == true {
+      #{$silent-class}margin--#{$name}-#{$size}{
+        margin-#{$name}: $value;
+      };
+    }
+  };
+};
+
+/*------------------------------------*\
+   BORDER
+\*------------------------------------*/
+
+$border-size : (
+  "without" :   0px,
+  "small" :     3px,
+  "medium" :    4px,
+  "large" :     5px,
+);
+
+@each $name in $directions-breakpoints {
+  @each $border, $value in $border-size {
+    //CSS class
+    #{$css-class}border--#{$name}-#{$border} {
+      border-#{$name}: $value
+    };
+    //silent class
+    @if $use-silent-classes == true {
+      #{$silent-class}border--#{$name}-#{$border} {
+        border-#{$name}: $value
+      };
+    }
+  };
+};
+
+/*------------------------------------*\
+   BORDER RADIUS
+\*------------------------------------*/
+  $border-radius-size : (
+    "without" :       0px,
+    "small" :         3px,
+    "medium" :        4px,
+    "large" :         5px,
+  );
+
+@each $name in $directions-y-breakpoints {
+  @each $x in $directions-x-breakpoints {
+    @each $radius, $value in $border-radius-size {
+      //CSS class
+      #{$css-class}border--#{$name}-#{$x}-#{$radius} {
+        border-#{$name}-#{$x}-radius: $value
+      };
+      //Silent class
+      @if $use-silent-classes == true {
+        #{$silent-class}border--#{$name}-#{$x}-#{$radius} {
+          border-#{$name}-#{$x}-radius: $value
+        };
       }
     };
+  };
 };
